@@ -95,3 +95,10 @@ img {
 	transform: scale(1.5); /* Scales up the iframe containing the button */
 	transform-origin: center center; /* Ensures the scaling is centered */
 }
+
+div img {
+    width: 250px; /* Adjust the width as needed */
+	shape-image-threshold: 50px;
+}
+
+
