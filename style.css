@@ -1,7 +1,78 @@
 #menu
 {
+	list-style: none; 
+	margin: 0; 
+	padding: 0; 
+	display: flex;
 	position: fixed;
 	width: 100%;
-	height: 35px;
-	background: white;
+	height: 40px;
+	background: rgb(144, 179, 184);
+	text-align:center;
+	font-family: 'Poiret One', sans-serif;
+	font-size: 25px;
+	color: rgb(122, 75, 99);
+}
+
+#menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+#menu ul li {
+    padding: 0 10px;
+}
+
+#menu ul li a {
+    text-decoration: none;
+    color: inherit; /* Inherits the white color from the parent */
+    font-weight: bold; /* Makes the text bold */
+}
+
+.section {
+	list-style: none;
+	color: rgb(122, 75, 99);
+	font-family: 'Poiret One', sans-serif;
+	font-weight: bold;
+	text-align:center;
+	font-size: 22px;	
+	padding: 30px 0;
+	background: linear-gradient(to bottom, transparent 85%, rgb(119, 173, 182) 85% 86%, transparent 85%);
+}
+
+#emailForm {
+    font-family: 'Poiret One', sans-serif;
+	font-weight: bold;
+	text-align:center;
+    padding: 20px;
+    border-radius: 8px; 
+}
+
+#emailForm input[type="email"], #emailForm textarea {
+    display: inline-block; 
+    border: 1px solid #ccc; 
+    box-sizing: border-box; 
+    border-radius: 4px; 
+}
+
+#emailForm select {
+    padding: 8px;
+    border: 1px solid #ccc; 
+    border-radius: 4px;
+    background-color: white; 
+}
+
+#emailForm button {
+    background-color: #30c57f;
+    color: white; 
+    padding: 14px 20px; 
+    margin: 8px 0; 
+    border: none; 
+    cursor: pointer; 
+}
+
+#emailForm button:hover {
+    background-color: #45a049; 
 }

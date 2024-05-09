@@ -1,19 +1,31 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<link rel="stylesheet" type="text/css" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 <body>
-<div id="menu">
-<li><a href="#about">About Me</a></li>
-<li><a href="#photos">My Photos</a></li>
-<li><a href="#playlist">My Playlist</a></li>
-<li><a href="#like">Like</a></li>
-<li><a href="#qrcoder">QR code</a></li>
-<li><a href="#spa">Q&A</a></li>
-<li><a href="#contact">Contact Me</a></li>
-</div>
-		  
+  <div id="menu">
+    <ul>
+        <li><a href="#about">About Me</a></li>
+        <li><a>|</a></li>
+        <li><a href="#photos">My Photos</a></li>
+        <li><a>|</a></li>
+        <li><a href="#playlist">My Playlist</a></li>
+        <li><a>|</a></li>
+        <li><a href="#like">Like</a></li>
+        <li><a>|</a></li>
+        <li><a href="#qrcoder">QR code</a></li>
+        <li><a>|</a></li>
+        <li><a href="#spa">Q&A</a></li>
+        <li><a>|</a></li>
+        <li><a href="#contact">Contact Me</a></li>
+    </ul>
+  </div>
+  
 <section id="about" class="section">
 <br/>
 <br/>
@@ -176,6 +188,30 @@ contact me
 </section>
 
 
+<form id="emailForm">
+    <label for="emailAddress">Your Email:</label>
+    <input type="email" id="emailAddress" name="emailAddress" required><br><br>
+
+    <label for="emailBody">Message:</label>
+    <textarea id="emailBody" name="emailBody" required></textarea><br><br>
+
+    <label for="smiley">Choose a Smiley:</label>
+    <select id="smiley" name="smiley">
+        <option value="&#128522">Happy</option>
+        <option value="&#128532">Sad</option>
+        <option value="&#128513">Very Happy</option>
+        <option value="&#128540">Playful</option>
+    </select><br><br>
+
+    <button type="button" onclick="sendEmail()">Send</button>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+</form>
+
+
 <script type="text/javascript">
 $(function(){
   $("#nav a").click(function(e){
@@ -189,5 +225,31 @@ $(function(){
     $('#menu').toggle($(this).scrollTop()>1000)
  });​
  </script>
+
+ <script type="text/javascript">
+  function sendEmail() {
+      var emailAddress = document.getElementById('emailAddress').value;
+      var emailBody = document.getElementById('emailBody').value;
+      var smiley = document.getElementById('smiley').value;
+
+      // Regular expression for validating the email address
+      var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+      // Check if the email address is valid
+      if (!emailRegex.test(emailAddress)) {
+          alert('Please enter a valid email address.');
+          return; // Stop the function if the email is not valid
+      }
+
+      // Encoding the body text and adding the smiley
+      emailBody = encodeURIComponent(emailBody + " " + smiley);
+
+      // Constructing the mailto link
+      var mailtoLink = 'mailto:' + 'sabba@gmail.com' + '?body=' + emailBody;
+
+      // Opening the mailto link in new window/tab
+      window.open(mailtoLink, '_blank');
+  }
+</script>
 </body>
 </html>
