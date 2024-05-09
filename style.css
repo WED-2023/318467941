@@ -76,3 +76,22 @@
 #emailForm button:hover {
     background-color: #45a049; 
 }
+
+img {
+	height: auto; /* Maintains the aspect ratio */
+	border: 2px solid #000; /* Adds a black border around the image */
+	display: block;
+	margin: auto;
+	
+}
+
+.fb-like {
+	display: flex;
+	justify-content: center; /* Centers horizontally */
+	margin-top: 20px; /* Adds some space at the top, optional */
+}
+
+.fb-like iframe {
+	transform: scale(1.5); /* Scales up the iframe containing the button */
+	transform-origin: center center; /* Ensures the scaling is centered */
+}
