@@ -77,13 +77,34 @@
     background-color: #45a049; 
 }
 
-img {
+p img {
 	height: auto; /* Maintains the aspect ratio */
 	border: 2px solid #000; /* Adds a black border around the image */
 	display: block;
 	margin: auto;
 	
 }
+
+.container {
+    display: flex;            /* Using Flexbox */
+    justify-content: flex-end; /* Align horizontally to the right */
+    align-items: center;      /* Center vertically */
+    height: 100vh;            /* Full height of the viewport */
+    text-align: right;        /* Ensure text inside the container is right-aligned */
+}
+
+.photo {
+    width: 50%;               /* Increase width to 50% of its container */
+    max-width: 800px;         /* Maximum width to avoid overly large sizes */
+    height: auto;             /* Keep the height proportional to the width */
+    border-radius: 100px;     /* Rounded corners for aesthetics */
+    transition: transform 0.3s ease; /* Smooth transformation on hover */
+}
+
+.photo:hover {
+    transform: scale(1.1);    /* Enlarge photo on hover */
+}
+
 
 .fb-like {
 	display: flex;
@@ -101,4 +122,21 @@ div img {
 	shape-image-threshold: 50px;
 }
 
+div h1{
+	text-align: center;
+	direction: rtl;
+}
+div h2{
+	text-align: right;
+	direction: rtl;
+}
 
+body, h2{
+    padding-right: 20px;
+    padding-left: 0;
+}
+
+.english-text {
+	direction: ltr; /* Left-to-right for embedded English text */
+	unicode-bidi: bidi-override; /* Ensures proper isolation and direction of English text */
+}
