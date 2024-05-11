@@ -86,7 +86,6 @@ p img {
 }
 
 .container {
-    display: flex;            /* Using Flexbox */
     justify-content: flex-end; /* Align horizontally to the right */
     align-items: center;      /* Center vertically */
     height: 100vh;            /* Full height of the viewport */
@@ -94,15 +93,10 @@ p img {
 }
 
 .photo {
-    width: 50%;               /* Increase width to 50% of its container */
+    width: 100%;               /* Increase width to 50% of its container */
     max-width: 800px;         /* Maximum width to avoid overly large sizes */
     height: auto;             /* Keep the height proportional to the width */
-    border-radius: 100px;     /* Rounded corners for aesthetics */
     transition: transform 0.3s ease; /* Smooth transformation on hover */
-}
-
-.photo:hover {
-    transform: scale(1.1);    /* Enlarge photo on hover */
 }
 
 
@@ -139,4 +133,17 @@ body, h2{
 .english-text {
 	direction: ltr; /* Left-to-right for embedded English text */
 	unicode-bidi: bidi-override; /* Ensures proper isolation and direction of English text */
+}
+
+.image-container {
+    text-align: center;  /* Center align the content of the container */
+    margin: auto;        /* Center the container itself if necessary */
+    width: 100%;         /* Take full width to ensure centering */
+    padding: 20px 0;     /* Add padding on top and bottom */
+}
+
+.image-container img {
+    display: block;      /* Makes img behave like a block-level element */
+    margin: 20px auto;   /* Vertical margin and horizontally center */
+    max-width: 90%;      /* Limits image width and ensures it's responsive */
 }
