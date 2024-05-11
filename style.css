@@ -100,15 +100,16 @@ p img {
 }
 
 
-.fb-like {
-	display: flex;
-	justify-content: center; /* Centers horizontally */
-	margin-top: 20px; /* Adds some space at the top, optional */
-}
-
-.fb-like iframe {
-	transform: scale(1.5); /* Scales up the iframe containing the button */
-	transform-origin: center center; /* Ensures the scaling is centered */
+.fb-like-container {
+    background-color: #f8f9fa;   /* Light background for contrast */
+    border: 1px solid #dcdcdc;   /* Subtle border for definition */
+    border-radius: 8px;          /* Rounded corners for a modern look */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    padding: 10px;               /* Padding to give some space around the iframe */
+    width: 470px;                /* Adjust width to accommodate padding */
+    display: flex;               /* Flexbox to center the iframe horizontally */
+    justify-content: center;     /* Center the iframe within the container */
+    margin: 20px auto;           /* Center the container on the page and add vertical space */
 }
 
 div img {
@@ -146,4 +147,27 @@ body, h2{
     display: block;      /* Makes img behave like a block-level element */
     margin: 20px auto;   /* Vertical margin and horizontally center */
     max-width: 90%;      /* Limits image width and ensures it's responsive */
+}
+.video-container {
+    display: flex;          /* Use Flexbox for layout */
+    justify-content: center; /* Center horizontally */
+    align-items: center;    /* Center vertically */
+    height: 100vh;          /* Optional: Takes full height of the viewport */
+}
+
+iframe {
+    max-width: 100%;        /* Ensures the iframe is responsive and does not overflow its container */
+}
+
+.main-heading {
+    color: #ffffff;               /* Sets the text color */
+    font-family: 'Poiret One', sans-serif; /* Uses Arial, but you can change it to any font you prefer */
+    font-size: 1.5em;             /* Sets a larger font size */
+    text-align: center;           /* Centers the text */
+    margin-top: 20px;             /* Adds space above the heading */
+    margin-bottom: 20px;          /* Adds space below the heading */
+    background-color: rgba(122, 75, 99, 0.449);    /* Light grey background for emphasis */
+    padding: 5px;                /* Adds padding around the text */
+    border-radius: 4px;           /* Rounds the corners of the background */
+    box-shadow: 0 4px 6px rgba(11, 9, 11, 0.63); /* Adds a subtle shadow for depth */
 }
