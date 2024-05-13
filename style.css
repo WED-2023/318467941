@@ -108,7 +108,7 @@ p img {
     padding: 10px;               /* Padding to give some space around the iframe */
     width: 470px;                /* Adjust width to accommodate padding */
     display: flex;               /* Flexbox to center the iframe horizontally */
-    justify-content: center;     /* Center the iframe within the container */
+    align-items: center;     /* Center the iframe within the container */
     margin: 20px auto;           /* Center the container on the page and add vertical space */
 }
 
