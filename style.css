@@ -113,25 +113,6 @@ p img {
 }
 
 
-.fb-like {
-    background-color: #f8f9fa;  /* Light background for contrast */
-    border: 1px solid #dcdcdc;  /* Subtle border for definition */
-    border-radius: 8px;         /* Rounded corners for a modern look */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
-    padding: 10px;              /* Padding to give some space around the iframe */
-    width: 470px;               /* Adjust width to accommodate padding */
-    margin: 20px auto;          /* Center the container on the page and add vertical space */
-    display: flex;              /* Flexbox to center the iframe horizontally */
-    align-items: center;        /* Center the iframe within the container */
-    justify-content: center;    /* Center the iframe within the flex container */
-}
-
-@media (max-width: 768px) {
-    .fb-like {
-        width: 90%;             /* Adjust width for smaller screens */
-    }
-}
-
 div img {
     width: 250px; /* Adjust the width as needed */
 	shape-image-threshold: 50px;
