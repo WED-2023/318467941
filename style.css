@@ -31,23 +31,36 @@
     font-weight: bold; /* Makes the text bold */
 }
 
+body {
+    background-image: url('Ib.jpg'); /* Replace with the path to your image */
+    background-size: cover;        /* Cover the entire viewport */
+    background-position: center;   /* Center the image */
+    background-repeat: no-repeat;  /* Do not repeat the image */
+    background-attachment: fixed;  /* Make the background image fixed in place */
+    margin: 0;                     /* Remove default margin */
+    height: 100vh;                 /* Ensure the body takes the full viewport height */
+}
+
 .section {
 	list-style: none;
 	color: rgb(122, 75, 99);
 	font-family: 'Poiret One', sans-serif;
 	font-weight: bold;
 	text-align:center;
-	font-size: 22px;	
-	padding: 30px 0;
-	background: linear-gradient(to bottom, transparent 85%, rgb(119, 173, 182) 85% 86%, transparent 85%);
+	font-size: 32px;	
+	background: linear-gradient(to bottom, transparent 85%, rgba(122, 209, 46, 0.414) 80% 88%, transparent 20%);
 }
 
 #emailForm {
     font-family: 'Poiret One', sans-serif;
 	font-weight: bold;
 	text-align:center;
-    padding: 20px;
+    padding: 40px;
     border-radius: 8px; 
+    color: rgb(255, 255, 255);
+    background-color: #637c7263;  /* Dark background color for the form */
+    max-width: 300px; /* Maximum width for the form */
+    margin: auto; /* Center the form horizontally */
 }
 
 #emailForm input[type="email"], #emailForm textarea {
@@ -101,16 +114,22 @@ p img {
 
 
 .fb-like {
-    background-color: #f8f9fa;   /* Light background for contrast */
-    border: 1px solid #dcdcdc;   /* Subtle border for definition */
-    border-radius: 8px;          /* Rounded corners for a modern look */
+    background-color: #f8f9fa;  /* Light background for contrast */
+    border: 1px solid #dcdcdc;  /* Subtle border for definition */
+    border-radius: 8px;         /* Rounded corners for a modern look */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
-    padding: 10px;               /* Padding to give some space around the iframe */
-    width: 470px;                /* Adjust width to accommodate padding */
-    display: flex;               /* Flexbox to center the iframe horizontally */
-    align-items: center;     /* Center the iframe within the container */
-    justify-content: flex-end;
-    margin: 20px auto;           /* Center the container on the page and add vertical space */
+    padding: 10px;              /* Padding to give some space around the iframe */
+    width: 470px;               /* Adjust width to accommodate padding */
+    margin: 20px auto;          /* Center the container on the page and add vertical space */
+    display: flex;              /* Flexbox to center the iframe horizontally */
+    align-items: center;        /* Center the iframe within the container */
+    justify-content: center;    /* Center the iframe within the flex container */
+}
+
+@media (max-width: 768px) {
+    .fb-like {
+        width: 90%;             /* Adjust width for smaller screens */
+    }
 }
 
 div img {
